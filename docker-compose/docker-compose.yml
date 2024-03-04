@@ -92,3 +92,11 @@ services:
     extends:
       file: ./services/nginx.yml
       service: proxy
+
+
+
+  smart-contract-verifier:
+   
+    extends:
+      file: ./services/smart-contract-verifier.yml
+      service: smart-contract-verifier
