@@ -8,6 +8,11 @@ services:
       - 'host.docker.internal:host-gateway'
     volumes:
       - "../proxy:/etc/nginx/templates"
+      - "/etc/letsencrypt/archive/magmascan.org:/etc/magmascanssl"
+      - "/etc/letsencrypt/archive/stats.magmascan.org:/etc/statsssl"
+      - "/etc/letsencrypt/archive/visualizer.magmascan.org:/etc/visualizerssl"
+
+
     environment:
       BACK_PROXY_PASS: ${BACK_PROXY_PASS:-http://backend:4000}
       FRONT_PROXY_PASS: ${FRONT_PROXY_PASS:-http://frontend:3000}
