@@ -9,7 +9,7 @@ server {
     listen       443 ssl;
     server_name  magmascan.org;
     ssl_certificate /etc/magmascanssl/fullchain1.pem;
-    ssl_certificate_key /etc/magmascanssl/privkey1.key;
+    ssl_certificate_key /etc/magmascanssl/privkey1.pem;
 
 
     proxy_http_version 1.1;
@@ -43,7 +43,7 @@ server {
 
     server_name   stats.magmascan.org;
     ssl_certificate /etc/statsssl/fullchain1.pem;
-    ssl_certificate_key /etc/statsssl/privkey1.key;
+    ssl_certificate_key /etc/statsssl/privkey1.pem;
 
     proxy_http_version 1.1;
     proxy_hide_header Access-Control-Allow-Origin;
@@ -70,7 +70,7 @@ server {
 
     server_name   visualizer.magmascan.org;
     ssl_certificate /etc/visualizerssl/fullchain1.pem;
-    ssl_certificate_key /etc/visualizerssl/privkey1.key;
+    ssl_certificate_key /etc/visualizerssl/privkey1.pem;
 
     proxy_http_version 1.1;
     proxy_hide_header Access-Control-Allow-Origin;
